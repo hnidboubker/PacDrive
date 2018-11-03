@@ -10,7 +10,14 @@ namespace PacDrive.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+           
+
+            //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+            //    "~/Scripts/jquery.unobtrusive*",
+            //    "~/Scripts/jquery.validate*"));
+
             
+
             
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
