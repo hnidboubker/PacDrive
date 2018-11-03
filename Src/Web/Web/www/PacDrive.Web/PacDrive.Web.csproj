@@ -1172,6 +1172,12 @@
     <Folder Include="App_Data\" />
     <Folder Include="Asserts\libs\" />
     <Folder Include="Asserts\styles\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Entities\" />
+    <Folder Include="EntityFramework\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Infrastructures\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
