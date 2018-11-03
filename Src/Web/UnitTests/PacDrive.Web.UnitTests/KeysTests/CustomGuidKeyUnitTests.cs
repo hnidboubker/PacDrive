@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace PacDrive.Web.UnitTests.KeysTests
 {
-    [TestClass]
+    [TestFixture]
     public class CustomGuidKeyUnitTests
     {
-        [TestMethod]
+        [Test]
         public void User_CustomGuid_Should_Return_Collections()
         {
 
