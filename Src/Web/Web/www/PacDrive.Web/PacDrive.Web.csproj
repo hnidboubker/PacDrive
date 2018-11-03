@@ -363,7 +363,10 @@
     <Content Include="Scripts\popper.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Asserts\libs\" />
+    <Folder Include="Asserts\styles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
