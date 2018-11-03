@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacDrive.Web", "Src\Web\Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacDrive.Web.UnitTests", "Src\Web\UnitTests\PacDrive.Web.UnitTests\PacDrive.Web.UnitTests.csproj", "{5992AF9E-79DC-4671-AAB3-93A153058F6B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{307F5AA4-DD94-4DC3-B8ED-5EA571B3326C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
