@@ -17,7 +17,7 @@ namespace PacDrive.Web
 
             bundles.Add(new StyleBundle("~/Content/styles").Include(
                 "~/Content/bootstrap.css",
-                "~/Content/sweetalert/sweetalet-min.css",
+                "~/Content/sweetalert/sweet-alert.css",
                 "~/Content/Site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
