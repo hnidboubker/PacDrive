@@ -3,6 +3,8 @@ using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using PacDrive.Web.Entities;
+using System.Data.Entity.Infrastructure.Annotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PacDrive.Web.EntityFramework
 {
@@ -41,10 +43,32 @@ namespace PacDrive.Web.EntityFramework
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<User>()
+                .HasMany(o => o.Logins)
+                .WithRequired()
+                .HasForeignKey(u => u.UserId);
+            modelBuilder.Entity<User>()
+                .HasMany(o => o.Claims)
+                .WithRequired()
+                .HasForeignKey(u => u.UserId);
+            modelBuilder.Entity<User>()
+                .HasMany(o => o.Roles)
+                .WithRequired()
+                .HasForeignKey(u => u.UserId);
             modelBuilder.Entity<User>().HasKey(o => new
             {
                 Id = o.Id
             });
+            modelBuilder.Entity<User>()
+                .Property(o => o.UserName)
+                .IsRequired()
+                .HasMaxLength(256)
+                .HasColumnAnnotation("Index", 
+                new IndexAnnotation(new IndexAttribute("UserNameIndex") 
+                {
+                    IsUnique = true 
+                }));
+
             modelBuilder.Entity<UserLogin>().ToTable("UserLogin");
             modelBuilder.Entity<UserLogin>().HasKey(o => new
             {
@@ -71,6 +95,18 @@ namespace PacDrive.Web.EntityFramework
             {
                 Id = o.Id
             });
+            modelBuilder.Entity<Role>()
+                .Property(o => o.Name)
+                .IsRequired()
+                .HasMaxLength(256)
+                .HasColumnAnnotation("Index",
+                new IndexAnnotation(
+                    new IndexAttribute("RoleNameIndex")
+                    {
+                        IsUnique = true
+                    }));
+            modelBuilder.Entity<Role>()
+                .HasMany(o => o.Users).WithRequired().HasForeignKey(r => r.RoleId);
         }
     }
 }
