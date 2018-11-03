@@ -37,11 +37,13 @@ namespace PacDrive.Web
                 "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/angular.min.js", 
+                "~/Scripts/angular-route.min.js"
 
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-              
+              "~/app/app.js"
               ));
 
             
