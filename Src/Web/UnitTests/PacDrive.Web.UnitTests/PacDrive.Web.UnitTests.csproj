@@ -52,10 +52,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="KeysTests\CustomGuidKeyUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="KeysTests\GuidBaseTests\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
