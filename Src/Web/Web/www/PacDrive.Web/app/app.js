@@ -1,14 +1,15 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app', [
+  var app =  angular.module('app', [
         // Angular modules
-        'ngAnimate',
+        //'ngAnimate',
         'ngRoute'
 
         // Custom modules
 
         // 3rd Party Modules
         
-    ]);
+  ]);
+    app.run();
 })();
